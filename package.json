@@ -7,7 +7,7 @@
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build": "ng build --prod --build-optimizer=false"
+    "build": "ng build --dev --build-optimizer=false"
   },
   "private": true,
   "dependencies": {
