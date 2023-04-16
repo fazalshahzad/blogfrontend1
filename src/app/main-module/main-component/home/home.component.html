@@ -1,0 +1,102 @@
+<div>
+
+
+    <section id="hero">
+        <h2>#ReadMore</h2>
+        <p>Read all case studies about our products!</p>
+    </section>
+
+
+
+
+
+
+    <section class="category">
+        <div class="container">
+            <div class="title text-center mt-5">
+
+
+                <!---------------------------------------------------------------------Product-Section --------------------------->
+                <div class="">
+                    <div class="container">
+
+                        <!--------------------------------------------------------------------- Product-View-1 --------------------------->
+                        <div class="row">
+                            <div class=""
+                                *ngFor="let item of ProductArray | paginate: { itemsPerPage: 6, currentPage: p }">
+                                <div class="wrapper" *ngIf="productView === true">
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <!-- new styling -->
+
+                            <link
+                                href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+                                rel="stylesheet">
+
+
+
+
+
+
+                          
+                                <div class="container" id="body">
+                                    <div class="card "
+                                        *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
+                                        <figure class="card__thumb" (click)="reDirectSingleProductPage(item._id)">
+                                            <img [src]="Url+item.ProductImages[0].ProductImageUrl" alt=""
+                                                class="card__image">
+                                            <div class="card__caption">
+                                                <h2 class="card__title">{{item.productName}}</h2>
+                                                <p class="card__snippet">{{item.description}}</p>
+                                                <a href="" class="card__button"
+                                                (click)="reDirectSingleProductPage(item._id)">Read more</a>
+                                            </div>
+                                        </figure>
+                                    </div>
+    
+    
+                                </div>
+
+
+
+                            <div class="mt-5 text-center">
+                                <pagination-controls class="my-pagination"
+                                    (pageChange)="p = $event"></pagination-controls>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

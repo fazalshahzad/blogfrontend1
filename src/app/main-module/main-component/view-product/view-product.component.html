@@ -1,0 +1,32 @@
+<section id="hero">
+    <h2>#ReadMore</h2>
+    <p>Read all case studies about our products!</p>
+</section>
+<!-------------------------------------------------------------------- view-product  -->
+<div class="container" id="page">
+    <div class="row">
+
+        <div class="col-md-4 my-3">
+            <div class="gallery" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
+                <input type="radio" checked="checked" name="select" >
+                <label class="inline"
+                    ></label>
+                <img [src]="url+images.ProductImageUrl">
+
+
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="content">
+                <h1>{{getAllDataWithOwnId?.productName}}</h1>
+                <hr>
+
+               
+                <p>{{getAllDataWithOwnId?.description}}</p>
+                
+            </div>
+        </div>
+    </div>
+
+
