@@ -10,10 +10,10 @@ export class ProductApiService {
     private readonly http:HttpClient
   ) { }
   createProductCart(payLoad:any){
-    return this.http.post('https://blog-backend-kohl.vercel.app//ProductManagement/ProductData',payLoad)
+    return this.http.post('http://localhost:8686/ProductManagement/ProductData',payLoad)
   }
   getProduct(){
-    return this.http.get("https://blog-backend-kohl.vercel.app//ProductManagement/GetProductData")
+    return this.http.get("http://localhost:8686/ProductManagement/GetProductData")
   }
   getProductWithId(id:any){
 return  this.http.get(`https://blog-backend-kohl.vercel.app//ProductManagement/getDocumentById/${id}`)  // 1st step create first slug and second slug then go to server.js commit section 👍👍👍 // after creating this slug getDocumentById/ then give id from here
